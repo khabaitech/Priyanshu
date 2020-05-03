@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+		
+		button{
+
+			position:absolute;
+			left: 43%;
+			top: 50%;
+		}
+
+		h3{
+			
+				text-shadow: 4px  4px white;
+				margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<button class="btn-lg btn-success btn-outline-warning">Click Me</button>
+	<h3  class=" font-weight-bold display-1 text-center" id="a4">HEXCOLOR:#99FF00</h1>
+	
+<script >
+const btn = document.querySelector('button')
+const main = document.querySelector('body')
+ color = ['#FF5733', '#633974', '#1ABC9C', '#2ECC71', '#F4DO3F', '#FF99FF','#33FFFF','#3300FF','#330066']
+
+main.style.backgroundColor = '#99FF00'
+btn.addEventListener('click',function(){
+const colorIndex= parseInt(Math.random()*color.length)
+main.style.backgroundColor = color[colorIndex];
+document.getElementById("a4").innerHTML="HEXCOLOR:"+color[colorIndex];
+});
+
+</script>
+</body>
+</html> 
